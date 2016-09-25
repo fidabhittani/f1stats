@@ -68,7 +68,7 @@ directive('checkImage', function($http) {
             attrs.$observe('ngSrc', function(ngSrc) {
                 $http.get(ngSrc).success(function(){
                 }).error(function(){
-                    element.attr('src', '/images/flags/Pakistan.png'); // set default image
+                    element.attr('ng-src', 'images/flags1/Pakistan.png'); // set default image
                 });
             });
         }

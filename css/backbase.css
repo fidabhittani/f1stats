@@ -6,7 +6,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
- 		background-image: url('http://www.easyfreepatterns.com/patterns/231/dark-grey-pattern-background-cross-lined-embossed-231443.jpg');
+ 		background-image: url('/images/bb-bg.jpg');
   font-family: "Roboto", helvetica, arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -32,7 +32,6 @@ div.table-title {
 .container{
   width: 100%;
 }
-
 
 /*
       Table Styles
@@ -187,6 +186,7 @@ input {
   box-shadow: 0 2px 5px hsla(0,0%,0%,.4), inset 0 0 10px 10px hsla(0,0%,0%,.5);
   border:2px solid black;
   border-top: 0px;
+  cursor: pointer
 }
 .winner {
   background: rgba(128, 251, 128, 0.25);
