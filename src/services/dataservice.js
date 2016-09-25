@@ -11,9 +11,9 @@ function dataservice(datagraph) {
         getChampionships : getChampionships,
         getYearsRange : getYearsRange,
         getChampionshipResults : getChampionshipResults,
-
     };
     return service;
+
 /*
   Make use of datagraph to put a GET request and 
   get the championships on the provided endpoint.

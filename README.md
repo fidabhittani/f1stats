@@ -7,6 +7,8 @@
 	Application code is reusable.
 	Application code Well commented.
 
+	Application logic is mostly, Inside of `src` directory.
+
 ## Usage
 	- Application has a simple flow. It can be run from any lightweight server.
 	- The application doesnt really needs any server, But some of the request put to a third party domain, makes it difficult for angular ro resolve the CROSS DOMAIN http issues. So Application needs to be on http protocol to avoid that, which you can do by running it under any server.
@@ -14,9 +16,17 @@
 ## Technologies.
 	- As per requirment, Angularjs is conveniently used to create SPA application
 	- Simple Custom CSS are used.
-	- CSS used are a little Goldplated, Because the reason that the Application is related to sports and sports people like application with heavy CSS.
-## Additional Info
+	- CSS used are a little Goldplated, Because the reason that the Application is related to sports and sports people like application with heavy CSS.	
 
-TBD
+## Tests
+Karma Test runner is being setup with jasmine for test framework
+Well, not complete unit tests were written, but Testing process is a part of application and you can write any tests inside of tests folder using Jasmine.
+Karma is all configured to run tests.
 
+too run tests. do ## karma start
 
+## Running Application flow
+  - bower install
+  - npm install	
+  - npm start
+  - karma start (for tests)

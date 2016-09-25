@@ -31,7 +31,7 @@ angular.module('Backbase.controllers', ['Backbase.services']).
           callback(response.MRData.RaceTable.Races);
       } , function(){
         $scope.isLoading = false;
-        alert("Failed to Load the Resource, Check Network");
+         window.alert("Failed to Load the Resource, Check Network");
       });      
     }
 /*
@@ -49,7 +49,7 @@ angular.module('Backbase.controllers', ['Backbase.services']).
 */
     $scope.switchSortType = function(type){
       $scope.sortType = type;
-      if($scope.sortDirection == false){
+      if($scope.sortDirection === false){
         $scope.sortDirection = true;
       } else{
         $scope.sortDirection = false;        
