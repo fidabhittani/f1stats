@@ -1,0 +1,67 @@
+  <div class="loading" ng-show="isLoading">Loading&#8230;</div>
+  <table class="table-fill">
+    <thead>
+      <tr>
+        <th ng-class="{'sort': sortType=='round' }">
+          <a ng-click="switchSortType('round')" title="Sort {{ (sortDirection)?'Ascending':'Descending' }}" class="table-head">
+              Round <span ng-show="sortType=='round'" class="fa fa-caret-{{ (sortDirection)?'up':'down' }}"></span>
+          </a>
+
+        </th>
+        <th ng-class="{'sort': sortType=='circuitName' }"> 
+          <a ng-click="switchSortType('circuitName')" class="table-head" title="Sort {{ (sortDirection)?'Ascending':'Descending' }}">
+              Circuit <span ng-show="sortType=='circuitName'" class="fa fa-caret-{{ (!sortDirection)?'up':'down' }}"></span>
+          </a>
+        </th>
+        <th ng-class="{'sort': sortType=='raceName' }">
+          <a ng-click="switchSortType('raceName')" class="table-head" title="Sort {{ (sortDirection)?'Ascending':'Descending' }}">
+              Race <span ng-show="sortType=='raceName'" class="fa fa-caret-{{ (!sortDirection)?'up':'down' }}"></span>
+          </a>
+        </th>
+        <th>Date/Time</th>
+        <th ng-class="{'sort': sortType=='country' }">
+          <a ng-click="switchSortType('country')" class="table-head" title="Sort {{ (sortDirection)?'Ascending':'Descending' }}">
+              Location <span ng-show="sortType=='country'" class="fa fa-caret-{{ (!sortDirection)?'up':'down' }}"></span>
+          </a>
+
+        </th>
+        <th>&nbsp</th>
+      </tr>
+
+    </thead>
+    <tbody  class="table-hover">
+      <tr>
+        <td colspan="2">Showing Championships for <strong>{{selectedYear}}</strong></td>
+        <td colspan="2">
+        <label> Chooose year</label>
+
+        <select 
+            ng-model="selectedYear" ng-change="handleYearChange()"
+            ng-options="option.value as option.name for option in options">
+        </select>
+        </td>
+        <td colspan="2"><input type="text" name="" placeholder="Search" ng-model="nameFilter"></td>
+      </tr>
+
+      <tr ng-repeat="championship in championships | orderBy:sortType:sortDirection | filter: nameFilter ">
+      {{championship}}
+        <td>{{championship.round}}</td>
+        <td>
+        <img check-image alt="Flag" ng-src="images/flags/{{championship.Circuit.Location.country}}.png" width="24px">
+          <a href="{{championship.Circuit.url}}" target="_blank">{{championship.Circuit.circuitName}}</a> 
+        </td>
+        <td>{{championship.raceName}}</td>
+        <td>{{championship.date}}- {{ championship.time }}</td>
+        <td>{{championship.Circuit.Location.locality}} , {{ championship.Circuit.Location.country }}</td>
+        <td><a href="/#/results/{{championship.round}}/{{championship.season}}" class="backbase-btn">Results</a></td>
+      </tr>
+
+      <tr>
+      <td colspan="6">
+           <p ng-hide="!championshipsResults.length"> No Championships Found</p>
+           <p ng-hide="!isLoading"> Loading...</p>
+      </td>
+      </tr>
+
+    </tbody>
+  </table>

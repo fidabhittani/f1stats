@@ -1,0 +1,24 @@
+{
+  "name": "BackBaseExercise",
+  "authors": [
+    "khan.kansas@gmail.com"
+  ],
+  "description": "BackBase Front End Exercise",
+  "main": "",
+  "keywords": [
+    "js"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}

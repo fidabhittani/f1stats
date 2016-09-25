@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>F-1 Feeder</title>
+  <link rel="stylesheet" type="text/css" href="css/backbase.css">
+  <link rel="stylesheet" type="text/css" href="css/customised-font-aw.css">
+</head>
+
+<body ng-app="Backbase">
+
+<div id="main">
+
+<div class="table-title">
+  <h3>Welcome to the F1 Moto Stats</h3>
+</div>
+<hr>
+  <div class="container">
+
+    <div class="side-bar">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Fun Link</a></li>
+          <li><a href="#">Link</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="content">
+      <ng-view></ng-view>
+    </div>
+
+    <div class="clear"></div>
+  </div>  
+
+</div>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+
+  <script src="src/app.js"></script>
+  <script src="src/services/datagraph.js"></script>
+  <script src="src/services/dataservice.js"></script>
+  <script src="src/controllers/championship.js"></script>
+  <script src="src/controllers/results.js"></script>
+</body>
+</html>
