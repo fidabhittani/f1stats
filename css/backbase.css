@@ -2,8 +2,8 @@
   Created by Fida  on 9/23/16.
   Combined CSS for Backbase Excercise.
 */
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
  		background-image: url('/images/bb-bg.jpg');
