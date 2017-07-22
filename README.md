@@ -1,4 +1,4 @@
-# BackBase Excercise
+# Formula1 Stats Excercise
 
 Demo. http://f1stats-bb.herokuapp.com
 
